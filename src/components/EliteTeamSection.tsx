@@ -16,25 +16,27 @@ const EliteTeamSection = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative grid grid-cols-2 gap-3"
+            className="relative"
           >
-            <div className="relative overflow-hidden">
-              <img
-                src={bodyguardMale}
-                alt="Escolta profesional masculino"
-                className="w-full h-full object-cover min-h-[350px]"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />
-            </div>
-            <div className="relative overflow-hidden">
-              <img
-                src={bodyguardFemale}
-                alt="Escolta profesional femenina"
-                className="w-full h-full object-cover min-h-[350px]"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />
+            <div className="grid grid-cols-2 gap-3 h-full">
+              <div className="relative overflow-hidden">
+                <img
+                  src={bodyguardMale}
+                  alt="Escolta profesional masculino"
+                  className="w-full h-full object-cover object-center aspect-[3/4]"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />
+              </div>
+              <div className="relative overflow-hidden">
+                <img
+                  src={bodyguardFemale}
+                  alt="Escolta profesional femenina"
+                  className="w-full h-full object-cover object-top aspect-[3/4]"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />
+              </div>
             </div>
             {/* Overlay badge */}
             <div className="absolute bottom-4 left-4 right-4 bg-background/90 backdrop-blur-sm border border-border p-4 flex items-center justify-between">
