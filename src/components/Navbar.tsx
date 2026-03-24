@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Instagram, Facebook, Youtube } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20información";
@@ -41,7 +41,16 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
+            <a href="https://www.instagram.com/10xaseglo_agencia" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-foreground/50 hover:text-primary transition-colors">
+              <Instagram className="w-4 h-4" />
+            </a>
+            <a href="https://www.facebook.com/@10xaseglo" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-foreground/50 hover:text-primary transition-colors">
+              <Facebook className="w-4 h-4" />
+            </a>
+            <a href="https://www.youtube.com/@10xaseglo" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-foreground/50 hover:text-primary transition-colors">
+              <Youtube className="w-4 h-4" />
+            </a>
             <a
               href={WHATSAPP_URL}
               target="_blank"
