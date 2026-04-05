@@ -107,7 +107,7 @@ const PradoCard = ({ vehicle }: { vehicle: Vehicle }) => {
       transition={{ delay: 0.1 }}
       className="group bg-card border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden"
     >
-      <div className="relative h-64 md:h-72 bg-[#1a1a1a] flex items-center justify-center overflow-hidden">
+      <div className="relative h-64 md:h-72 bg-white flex items-center justify-center overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.img
             key={activeColor}
@@ -173,7 +173,7 @@ const VehicleCard = ({ vehicle, index }: { vehicle: Vehicle; index: number }) =>
       transition={{ delay: index * 0.1 }}
       className="group bg-card border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden"
     >
-      <div className="relative h-64 md:h-72 bg-[#1a1a1a] flex items-center justify-center overflow-hidden">
+      <div className="relative h-64 md:h-72 bg-white flex items-center justify-center overflow-hidden">
         {vehicle.image ? (
           <img
             src={vehicle.image}
@@ -228,7 +228,7 @@ const VanCard = ({ vehicle, index }: { vehicle: Vehicle; index: number }) => (
     transition={{ delay: index * 0.1 }}
     className="group bg-background border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden"
   >
-    <div className="relative h-52 bg-[#1a1a1a] flex items-center justify-center overflow-hidden">
+    <div className="relative h-52 bg-white flex items-center justify-center overflow-hidden">
       <Users className="w-24 h-24 text-primary/20 group-hover:text-primary/30 transition-colors duration-500" />
       {vehicle.premium && (
         <div className="absolute top-4 right-4 bg-gradient-gold text-primary-foreground px-3 py-1 text-xs font-bold tracking-wider uppercase">
