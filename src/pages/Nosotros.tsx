@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Target, Eye, MapPin, Users } from "lucide-react";
+import { Shield, Target, Eye, MapPin, Users, Award, Heart, Handshake } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -23,44 +23,71 @@ const Nosotros = () => {
               <h1 className="font-display text-4xl md:text-6xl font-bold mt-4">
                 10X Agency <span className="text-gradient-gold">Security Global</span>
               </h1>
+              <p className="text-muted-foreground max-w-2xl mx-auto mt-6">
+                Desde 2013 protegiendo lo que más importa
+              </p>
             </motion.div>
           </div>
         </section>
 
-        {/* About */}
+        {/* Nuestra Historia */}
         <section className="py-24">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <div className="flex items-center gap-3 mb-6">
                   <Users className="w-5 h-5 text-primary" />
-                  <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">Quiénes Somos</span>
+                  <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">Nuestra Historia</span>
                 </div>
                 <h2 className="font-display text-3xl font-bold mb-6">
-                  Una Agencia de Seguridad <span className="text-gradient-gold">de Élite</span>
+                  10X AGENCY SECURITY <span className="text-gradient-gold">GLOBAL S.A.S</span>
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  10XASEGLO es una Agencia de seguridad y vigilancia Global joven que se va posicionando como una empresa referente gracias a su constancia, garantías, profesionalidad y rápida capacidad de organización.
+                  Nació en 2013 como parte de un grupo de amigos que ahora son ex militares de las fuerzas especiales de Colombia, y se dedicaba a ofrecer servicios de capacitación y seguridad. Con el paso de los años, observamos que los clientes requerían una agencia de seguridad de confianza, que le ofreciera todas las garantías cuando las cosas se ponen difíciles.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Así 10XASEGLO AGENCY SECURITY GLOBAL S.A.S, con la firme intención de proteger y garantizar lo que más nos importa: <span className="text-foreground font-semibold">la seguridad de quien confía en nuestra marca.</span>
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Dotamos a todos nuestros profesionales de formación estricta y profesional adaptada a cada servicio con tecnología de punta en ciberseguridad, entrenamiento físico, técnico, táctico, conocimientos en DDHH, DICA.
+                  Nos hemos ido posicionando como referentes del sector por ser una agencia de seguridad de espíritu familiar en la que se fundamentan los valores de la ética, el compromiso y la lealtad. Si algo caracteriza a 10XASEGLO es estar siempre que se nos necesita, por más adversa que sea la situación.
                 </p>
+                <div className="mt-6 p-4 border-l-4 border-primary bg-primary/5">
+                  <p className="text-foreground font-display font-bold text-lg italic">
+                    "SIEMPRE GARANTIZAMOS LA SEGURIDAD DE NUESTROS CLIENTES."
+                  </p>
+                </div>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                className="grid grid-cols-2 gap-4"
+                className="space-y-6"
               >
-                {[
-                  { num: "10+", label: "Años" },
-                  { num: "500+", label: "Clientes" },
-                  { num: "108", label: "Oficinas" },
-                  { num: "2K+", label: "Activos" },
-                ].map((s) => (
-                  <div key={s.label} className="bg-card border border-border p-8 text-center">
-                    <div className="font-display text-3xl font-bold text-primary">{s.num}</div>
-                    <div className="text-muted-foreground text-xs tracking-wider uppercase mt-2">{s.label}</div>
-                  </div>
-                ))}
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { num: "2013", label: "Año de Fundación" },
+                    { num: "500+", label: "Clientes Protegidos" },
+                    { num: "10+", label: "Años de Experiencia" },
+                    { num: "2K+", label: "Operaciones Exitosas" },
+                  ].map((s) => (
+                    <div key={s.label} className="bg-card border border-border p-8 text-center">
+                      <div className="font-display text-3xl font-bold text-primary">{s.num}</div>
+                      <div className="text-muted-foreground text-xs tracking-wider uppercase mt-2">{s.label}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Valores */}
+                <div className="grid grid-cols-3 gap-4">
+                  {[
+                    { icon: Award, label: "Ética" },
+                    { icon: Handshake, label: "Compromiso" },
+                    { icon: Heart, label: "Lealtad" },
+                  ].map((v) => (
+                    <div key={v.label} className="bg-card border border-border p-5 text-center">
+                      <v.icon className="w-6 h-6 text-primary mx-auto mb-2" />
+                      <span className="text-sm font-bold tracking-wider uppercase">{v.label}</span>
+                    </div>
+                  ))}
+                </div>
               </motion.div>
             </div>
           </div>
