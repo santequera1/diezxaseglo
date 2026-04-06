@@ -87,24 +87,47 @@ const ServicesSection = () => {
               transition={{ delay: i * 0.1 }}
               className="group relative overflow-hidden bg-card border border-border hover:border-primary/40 transition-all duration-500"
             >
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                  width={800}
-                  height={600}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <Star className="w-4 h-4 text-primary fill-primary" />
+              {"link" in service && service.link ? (
+                <Link to={service.link as string} className="relative h-56 overflow-hidden block cursor-pointer">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                    width={800}
+                    height={600}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    <Star className="w-4 h-4 text-primary fill-primary" />
+                  </div>
+                </Link>
+              ) : (
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                    width={800}
+                    height={600}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    <Star className="w-4 h-4 text-primary fill-primary" />
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <service.icon className="w-5 h-5 text-primary" />
-                  <h3 className="font-display text-xl font-bold">{service.title}</h3>
+                  {"link" in service && service.link ? (
+                    <Link to={service.link as string} className="font-display text-xl font-bold hover:text-primary transition-colors">
+                      {service.title}
+                    </Link>
+                  ) : (
+                    <h3 className="font-display text-xl font-bold">{service.title}</h3>
+                  )}
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5">{service.description}</p>
                 <div className="flex items-center gap-3">
