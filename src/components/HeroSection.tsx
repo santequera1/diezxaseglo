@@ -16,6 +16,8 @@ const HeroSection = () => {
         <img src={heroBg} alt="10X ASEGLO Seguridad" className="w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-background/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+        {/* Scrim extra solo en mobile para legibilidad del texto */}
+        <div className="absolute inset-0 bg-background/55 md:hidden" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
