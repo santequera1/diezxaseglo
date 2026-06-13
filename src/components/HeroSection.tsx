@@ -28,8 +28,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 mb-6"
           >
-            <Shield className="w-5 h-5 text-primary" />
-            <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">
+            <Shield className="w-5 h-5 text-white md:text-primary" />
+            <span className="text-white md:text-primary text-sm font-semibold tracking-[0.3em] uppercase">
               {t.hero.badge}
             </span>
           </motion.div>
@@ -41,7 +41,7 @@ const HeroSection = () => {
             className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
             {t.hero.title1}{" "}
-            <span className="text-gradient-gold">{t.hero.titleHighlight}</span>{" "}
+            <span className="text-white md:text-gradient-gold">{t.hero.titleHighlight}</span>{" "}
             {t.hero.title2}
           </motion.h1>
 
