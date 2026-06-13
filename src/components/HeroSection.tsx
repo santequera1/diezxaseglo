@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 import { Shield, ArrowRight } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { Link } from "react-router-dom";
+import { useLanguage } from "@/i18n/LanguageContext";
+import heroBg from "@/assets/team-fleet.jpg";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20una%20cotización";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
@@ -24,7 +28,7 @@ const HeroSection = () => {
           >
             <Shield className="w-5 h-5 text-primary" />
             <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">
-              Protección de élite
+              {t.hero.badge}
             </span>
           </motion.div>
 
@@ -34,9 +38,9 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
-            Soluciones de{" "}
-            <span className="text-gradient-gold">Seguridad</span>{" "}
-            a tu Medida
+            {t.hero.title1}{" "}
+            <span className="text-gradient-gold">{t.hero.titleHighlight}</span>{" "}
+            {t.hero.title2}
           </motion.h1>
 
           <motion.p
@@ -45,7 +49,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 max-w-xl"
           >
-            La vigilancia y seguridad es una gran responsabilidad. Nuestro equipo analiza cada caso para ofrecer un servicio sin fisuras, con profesionales cualificados preparados para cada situación.
+            {t.hero.desc}
           </motion.p>
 
           <motion.div
@@ -60,15 +64,15 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground px-8 py-4 text-sm font-bold tracking-wider uppercase hover:shadow-gold transition-all"
             >
-              Pedir Cotización
+              {t.hero.cta1}
               <ArrowRight className="w-4 h-4" />
             </a>
-            <a
-              href="/servicios"
+            <Link
+              to="/servicios"
               className="inline-flex items-center justify-center gap-2 border border-primary/30 text-foreground px-8 py-4 text-sm font-semibold tracking-wider uppercase hover:border-primary hover:text-primary transition-all"
             >
-              Ver Servicios
-            </a>
+              {t.hero.cta2}
+            </Link>
           </motion.div>
         </div>
       </div>
@@ -82,12 +86,7 @@ const HeroSection = () => {
       >
         <div className="container mx-auto px-4 lg:px-8 py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { num: "10+", label: "Años de Experiencia" },
-              { num: "500+", label: "Clientes Satisfechos" },
-              { num: "108", label: "Oficinas con Licencia" },
-              { num: "2K+", label: "Activos Protegidos" },
-            ].map((stat) => (
+            {t.hero.stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="font-display text-2xl md:text-3xl font-bold text-primary">{stat.num}</div>
                 <div className="text-muted-foreground text-xs tracking-wider uppercase mt-1">{stat.label}</div>

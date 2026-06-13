@@ -1,8 +1,13 @@
 import { Instagram, Facebook, Youtube, Phone, Mail, MapPin } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20información";
 
+const navHrefs = ["/", "/servicios", "/nosotros", "/contacto"];
+
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 lg:px-8 py-16">
@@ -11,17 +16,17 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="font-display text-xl font-bold text-gradient-gold mb-4">10X ASEGLO</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Agency Security Global S.A.S — Soluciones de seguridad integrales en Colombia y el mundo.
+              {t.footer.brandDesc}
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="font-display font-bold text-sm tracking-wider uppercase mb-4 text-primary">Navegación</h4>
+            <h4 className="font-display font-bold text-sm tracking-wider uppercase mb-4 text-primary">{t.footer.navTitle}</h4>
             <ul className="space-y-2">
-              {["Inicio", "Servicios", "Sobre Nosotros", "Contacto"].map((item) => (
+              {t.footer.nav.map((item, i) => (
                 <li key={item}>
-                  <a href={`/${item === "Inicio" ? "" : item.toLowerCase().replace(/ /g, "-")}`} className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  <a href={navHrefs[i]} className="text-muted-foreground text-sm hover:text-primary transition-colors">
                     {item}
                   </a>
                 </li>
@@ -31,9 +36,9 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-display font-bold text-sm tracking-wider uppercase mb-4 text-primary">Servicios</h4>
+            <h4 className="font-display font-bold text-sm tracking-wider uppercase mb-4 text-primary">{t.footer.servicesTitle}</h4>
             <ul className="space-y-2">
-              {["Seguridad", "Transporte", "Tour V.I.P", "Hospedaje", "Entrenamiento", "Detective Privado"].map((item) => (
+              {t.footer.services.map((item) => (
                 <li key={item}>
                   <span className="text-muted-foreground text-sm">{item}</span>
                 </li>
@@ -43,7 +48,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display font-bold text-sm tracking-wider uppercase mb-4 text-primary">Contacto</h4>
+            <h4 className="font-display font-bold text-sm tracking-wider uppercase mb-4 text-primary">{t.footer.contactTitle}</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
                 <Phone className="w-4 h-4 text-primary" />
@@ -78,7 +83,7 @@ const Footer = () => {
       <div className="border-t border-border py-6">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <p className="text-muted-foreground text-xs tracking-wider">
-            Copyright © 2026 10X Agency Security Global S.A.S — Todos los derechos reservados
+            {t.footer.rights}
           </p>
         </div>
       </div>

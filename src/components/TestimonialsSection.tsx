@@ -1,25 +1,13 @@
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { Quote, BadgeCheck } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
+import celebrityImg from "@/assets/celebrity-protection.jpg";
 
-const testimonials = [
-  {
-    quote: "Fue increíble mi experiencia en Medellín Colombia, muy hermoso, agradezco a la Agencia de seguridad porque fueron geniales y me sentí en familia, logré grabar mis videos y al tiempo disfrutar.",
-    name: "Tony Hawk",
-    role: "Music entrepreneur, USA",
-  },
-  {
-    quote: "Soy muy afortunada de haber contactado a 10X, espectacular mi viaje con mi familia, me sentí como una artista. Un auto increíble solo para nosotros, conductor y un esquema de seguridad profesional y encantador.",
-    name: "Julia Miles",
-    role: "International Business, Alemania",
-  },
-  {
-    quote: "10XASEGLO me brindó mi estadía de trabajo como si fuesen vacaciones. Me acompañaron por Medellín, Cali, Cartagena, Bogotá y fue monumental la seguridad que me brindaron.",
-    name: "John Goodman",
-    role: "Empresario Internacional",
-  },
-];
+const names = ["Tony Hawk", "Julia Miles", "John Goodman"];
 
 const TestimonialsSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
@@ -29,16 +17,43 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">Testimonios</span>
+          <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">{t.testimonials.badge}</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4">
-            Lo Que Dicen <span className="text-gradient-gold">Nuestros Clientes</span>
+            {t.testimonials.title} <span className="text-gradient-gold">{t.testimonials.titleHighlight}</span>
           </h2>
         </motion.div>
 
+        {/* Trusted by international figures */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 gap-0 items-stretch mb-16 bg-card border border-primary/20 overflow-hidden"
+        >
+          <div className="relative min-h-[320px]">
+            <img
+              src={celebrityImg}
+              alt={t.testimonials.trustedAlt}
+              className="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/40 md:to-card/80" />
+          </div>
+          <div className="flex flex-col justify-center p-8 lg:p-12">
+            <div className="flex items-center gap-2 text-primary text-sm font-bold tracking-[0.2em] uppercase mb-4">
+              <BadgeCheck className="w-5 h-5" />
+              {t.testimonials.trustedBadge}
+            </div>
+            <p className="text-foreground/80 text-lg leading-relaxed">
+              {t.testimonials.trustedText}
+            </p>
+          </div>
+        </motion.div>
+
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
+          {t.testimonials.items.map((item, i) => (
             <motion.div
-              key={t.name}
+              key={names[i]}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -47,11 +62,11 @@ const TestimonialsSection = () => {
             >
               <Quote className="w-8 h-8 text-primary/20 mb-4" />
               <p className="text-foreground/80 text-sm leading-relaxed mb-6 italic">
-                «{t.quote}»
+                «{item.quote}»
               </p>
               <div className="border-t border-border pt-4">
-                <div className="font-display font-bold text-primary">{t.name}</div>
-                <div className="text-muted-foreground text-xs tracking-wider uppercase">{t.role}</div>
+                <div className="font-display font-bold text-primary">{names[i]}</div>
+                <div className="text-muted-foreground text-xs tracking-wider uppercase">{item.role}</div>
               </div>
             </motion.div>
           ))}
@@ -65,11 +80,14 @@ const TestimonialsSection = () => {
           className="mt-20 text-center p-12 bg-card border border-primary/20"
         >
           <p className="font-display text-xl md:text-2xl italic text-foreground/80 max-w-3xl mx-auto">
-            Cuando otras empresas dicen: <span className="text-muted-foreground">"Lo tenemos que estudiar."</span>
+            {t.testimonials.bannerOther}{" "}
+            <span className="text-muted-foreground">{t.testimonials.bannerOtherQuote}</span>
           </p>
           <p className="font-display text-xl md:text-2xl font-bold mt-3">
-            En <span className="text-gradient-gold">10X AGENCY SECURITY GLOBAL</span> decimos:{" "}
-            <span className="text-primary">"El servicio ya está operativo."</span>
+            {t.testimonials.bannerWe}{" "}
+            <span className="text-gradient-gold">10X AGENCY SECURITY GLOBAL</span>{" "}
+            {t.testimonials.bannerWeSay}{" "}
+            <span className="text-primary">{t.testimonials.bannerWeQuote}</span>
           </p>
         </motion.div>
       </div>

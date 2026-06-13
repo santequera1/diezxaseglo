@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
 import { Eye, Shield, Radio } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 import surveillanceImg from "@/assets/surveillance-room.png";
 import monitorImg from "@/assets/security-monitor.png";
 
+const icons = [Eye, Shield, Radio];
+
 const OperationsSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
@@ -14,9 +19,9 @@ const OperationsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary text-sm font-body font-semibold tracking-[0.3em] uppercase">Centro de Operaciones</span>
+          <span className="text-primary text-sm font-body font-semibold tracking-[0.3em] uppercase">{t.operations.badge}</span>
           <h2 className="font-display text-4xl md:text-6xl font-bold mt-4">
-            Vigilancia <span className="text-gradient-gold">24/7</span>
+            {t.operations.title} <span className="text-gradient-gold">{t.operations.titleHighlight}</span>
           </h2>
         </motion.div>
 
@@ -38,7 +43,7 @@ const OperationsSection = () => {
             <div className="absolute bottom-6 left-6 right-6">
               <div className="flex items-center gap-2 text-primary font-body text-xs font-bold tracking-widest uppercase">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Monitoreo en tiempo real
+                {t.operations.realtime}
               </div>
             </div>
           </motion.div>
@@ -51,33 +56,20 @@ const OperationsSection = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="flex gap-4 p-5 bg-card border border-border">
-                <Eye className="w-8 h-8 text-primary shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-display text-xl font-bold mb-1">Tecnología de Punta</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Sistemas de cámaras CCTV, drones de vigilancia y software de reconocimiento para garantizar la seguridad total.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4 p-5 bg-card border border-border">
-                <Shield className="w-8 h-8 text-primary shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-display text-xl font-bold mb-1">Respuesta Inmediata</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Protocolos de reacción rápida con personal entrenado en Fuerzas Especiales, disponibles las 24 horas.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4 p-5 bg-card border border-border">
-                <Radio className="w-8 h-8 text-primary shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-display text-xl font-bold mb-1">Comunicación Encriptada</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Canales de comunicación seguros y encriptados para la coordinación de operaciones en tiempo real.
-                  </p>
-                </div>
-              </div>
+              {t.operations.items.map((item, i) => {
+                const Icon = icons[i];
+                return (
+                  <div key={item.title} className="flex gap-4 p-5 bg-card border border-border">
+                    <Icon className="w-8 h-8 text-primary shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-display text-xl font-bold mb-1">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </motion.div>
 
             <motion.div

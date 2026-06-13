@@ -1,12 +1,32 @@
 import { motion } from "framer-motion";
-import { Shield, Target, Eye, MapPin, Users, Award, Heart, Handshake } from "lucide-react";
+import { Target, Eye, MapPin, Users, Award, Heart, Handshake } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CTASection from "@/components/CTASection";
-import heroBg from "@/assets/hero-bg.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
+import heroBg from "@/assets/team-fleet.jpg";
+import teamNavy from "@/assets/team-navy.jpg";
+import teamGrey from "@/assets/team-grey.jpg";
+import escoltasSuits from "@/assets/escoltas-suits-fleet.jpg";
+import escoltasTactical from "@/assets/escoltas-tactical.jpg";
+import escoltasVip from "@/assets/escoltas-vip-protege.jpg";
+import escoltasRifles from "@/assets/escoltas-rifles-vip.jpg";
+
+const valueIcons = [Award, Handshake, Heart];
 
 const Nosotros = () => {
+  const { t } = useLanguage();
+
+  const teamImages = [
+    { src: teamNavy, span: "md:col-span-2 md:row-span-2" },
+    { src: escoltasTactical, span: "" },
+    { src: escoltasVip, span: "" },
+    { src: teamGrey, span: "" },
+    { src: escoltasRifles, span: "" },
+    { src: escoltasSuits, span: "md:col-span-2" },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -19,12 +39,12 @@ const Nosotros = () => {
           </div>
           <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-              <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">Sobre Nosotros</span>
+              <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">{t.nosotros.badge}</span>
               <h1 className="font-display text-4xl md:text-6xl font-bold mt-4">
-                10X Agency <span className="text-gradient-gold">Security Global</span>
+                {t.nosotros.title} <span className="text-gradient-gold">{t.nosotros.titleHighlight}</span>
               </h1>
               <p className="text-muted-foreground max-w-2xl mx-auto mt-6">
-                Desde 2013 protegiendo lo que más importa
+                {t.nosotros.subtitle}
               </p>
             </motion.div>
           </div>
@@ -37,23 +57,23 @@ const Nosotros = () => {
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <div className="flex items-center gap-3 mb-6">
                   <Users className="w-5 h-5 text-primary" />
-                  <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">Nuestra Historia</span>
+                  <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">{t.nosotros.historyBadge}</span>
                 </div>
                 <h2 className="font-display text-3xl font-bold mb-6">
-                  10X AGENCY SECURITY <span className="text-gradient-gold">GLOBAL S.A.S</span>
+                  {t.nosotros.historyTitle} <span className="text-gradient-gold">{t.nosotros.historyHighlight}</span>
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Nació en 2013 como parte de un grupo de amigos que ahora son ex militares de las fuerzas especiales de Colombia, y se dedicaba a ofrecer servicios de capacitación y seguridad. Con el paso de los años, observamos que los clientes requerían una agencia de seguridad de confianza, que le ofreciera todas las garantías cuando las cosas se ponen difíciles.
+                  {t.nosotros.p1}
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Así 10XASEGLO AGENCY SECURITY GLOBAL S.A.S, con la firme intención de proteger y garantizar lo que más nos importa: <span className="text-foreground font-semibold">la seguridad de quien confía en nuestra marca.</span>
+                  {t.nosotros.p2pre}<span className="text-foreground font-semibold">{t.nosotros.p2strong}</span>
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nos hemos ido posicionando como referentes del sector por ser una agencia de seguridad de espíritu familiar en la que se fundamentan los valores de la ética, el compromiso y la lealtad. Si algo caracteriza a 10XASEGLO es estar siempre que se nos necesita, por más adversa que sea la situación.
+                  {t.nosotros.p3}
                 </p>
                 <div className="mt-6 p-4 border-l-4 border-primary bg-primary/5">
                   <p className="text-foreground font-display font-bold text-lg italic">
-                    "SIEMPRE GARANTIZAMOS LA SEGURIDAD DE NUESTROS CLIENTES."
+                    {t.nosotros.quote}
                   </p>
                 </div>
               </motion.div>
@@ -62,12 +82,7 @@ const Nosotros = () => {
                 className="space-y-6"
               >
                 <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { num: "2013", label: "Año de Fundación" },
-                    { num: "500+", label: "Clientes Protegidos" },
-                    { num: "10+", label: "Años de Experiencia" },
-                    { num: "2K+", label: "Operaciones Exitosas" },
-                  ].map((s) => (
+                  {t.nosotros.stats.map((s) => (
                     <div key={s.label} className="bg-card border border-border p-8 text-center">
                       <div className="font-display text-3xl font-bold text-primary">{s.num}</div>
                       <div className="text-muted-foreground text-xs tracking-wider uppercase mt-2">{s.label}</div>
@@ -77,47 +92,82 @@ const Nosotros = () => {
 
                 {/* Valores */}
                 <div className="grid grid-cols-3 gap-4">
-                  {[
-                    { icon: Award, label: "Ética" },
-                    { icon: Handshake, label: "Compromiso" },
-                    { icon: Heart, label: "Lealtad" },
-                  ].map((v) => (
-                    <div key={v.label} className="bg-card border border-border p-5 text-center">
-                      <v.icon className="w-6 h-6 text-primary mx-auto mb-2" />
-                      <span className="text-sm font-bold tracking-wider uppercase">{v.label}</span>
-                    </div>
-                  ))}
+                  {t.nosotros.values.map((label, i) => {
+                    const Icon = valueIcons[i];
+                    return (
+                      <div key={label} className="bg-card border border-border p-5 text-center">
+                        <Icon className="w-6 h-6 text-primary mx-auto mb-2" />
+                        <span className="text-sm font-bold tracking-wider uppercase">{label}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Mission & Vision */}
+        {/* Equipo Real */}
         <section className="py-24 bg-card">
+          <div className="container mx-auto px-4 lg:px-8">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">{t.nosotros.teamBadge}</span>
+              <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
+                {t.nosotros.teamTitle} <span className="text-gradient-gold">{t.nosotros.teamHighlight}</span>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">{t.nosotros.teamSubtitle}</p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[200px] gap-4">
+              {teamImages.map((img, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.06 }}
+                  className={`relative overflow-hidden border border-border group ${img.span}`}
+                >
+                  <img
+                    src={img.src}
+                    alt={t.nosotros.teamAlt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/40 to-transparent" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mission & Vision */}
+        <section className="py-24">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                className="bg-background border border-border p-10"
+                className="bg-card border border-border p-10"
               >
                 <div className="w-12 h-12 bg-primary/10 flex items-center justify-center mb-6">
                   <Target className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-4">Misión</h3>
+                <h3 className="font-display text-2xl font-bold mb-4">{t.nosotros.missionTitle}</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Brindar soluciones integrales de seguridad, transporte y protección con los más altos estándares de calidad, profesionalismo y tecnología avanzada, garantizando la tranquilidad y bienestar de nuestros clientes en cada momento.
+                  {t.nosotros.missionText}
                 </p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                className="bg-background border border-border p-10"
+                className="bg-card border border-border p-10"
               >
                 <div className="w-12 h-12 bg-primary/10 flex items-center justify-center mb-6">
                   <Eye className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-4">Visión</h3>
+                <h3 className="font-display text-2xl font-bold mb-4">{t.nosotros.visionTitle}</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Ser la agencia de seguridad global más reconocida en Colombia y Latinoamérica, posicionándonos como el socio estratégico preferido para empresas y particulares que buscan protección, confianza y excelencia operativa.
+                  {t.nosotros.visionText}
                 </p>
               </motion.div>
             </div>
@@ -125,16 +175,16 @@ const Nosotros = () => {
         </section>
 
         {/* Locations */}
-        <section className="py-24">
+        <section className="py-24 bg-card">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <MapPin className="w-8 h-8 text-primary mx-auto mb-4" />
-              <h2 className="font-display text-3xl font-bold mb-4">Nuestras <span className="text-gradient-gold">Sedes</span></h2>
-              <p className="text-muted-foreground max-w-xl mx-auto mb-10">Operamos en las principales ciudades de Colombia con cobertura nacional e internacional.</p>
+              <h2 className="font-display text-3xl font-bold mb-4">{t.nosotros.sedesTitle} <span className="text-gradient-gold">{t.nosotros.sedesHighlight}</span></h2>
+              <p className="text-muted-foreground max-w-xl mx-auto mb-10">{t.nosotros.sedesText}</p>
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {["Medellín", "Bogotá", "Cali", "Cartagena"].map((city) => (
-                <div key={city} className="bg-card border border-border p-6">
+              {t.nosotros.cities.map((city) => (
+                <div key={city} className="bg-background border border-border p-6">
                   <MapPin className="w-5 h-5 text-primary mx-auto mb-2" />
                   <span className="font-display font-bold">{city}</span>
                 </div>
