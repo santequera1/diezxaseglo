@@ -3,8 +3,8 @@ import { Shield, Car, MapPin, Building, GraduationCap, Search, Star } from "luci
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-import securityImg from "@/assets/team-fleet.jpg";
-import transportImg from "@/assets/transport-intercontinental.jpg";
+import securityImg from "@/assets/team-navy.jpg";
+import transportImg from "@/assets/team-fleet.jpg";
 import tourImg from "@/assets/tour-vip-service.jpg";
 import hospedajeImg from "@/assets/hospedaje-service.jpg";
 import trainingImg from "@/assets/training-service.jpg";
