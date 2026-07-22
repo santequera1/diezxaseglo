@@ -80,7 +80,7 @@ const OperationsSection = () => {
               <img
                 src={monitorImg}
                 alt="Escolta profesional 10X ASEGLO"
-                className="w-full h-48 object-cover object-top border border-border"
+                className="w-full h-64 md:h-48 object-cover object-[center_22%] border border-border"
                 loading="lazy"
               />
             </motion.div>
