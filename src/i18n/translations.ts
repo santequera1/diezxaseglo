@@ -14,8 +14,6 @@ const es = {
     titleHighlight: "Seguridad, Turismo y Transporte",
     title2: "a tu Medida",
     desc: "Garantizamos la seguridad, el transporte y el turismo de nuestros clientes con disciplina, lealtad y profesionalismo.",
-    desc2:
-      "Somos un equipo de 25 profesionales con experiencia en las Fuerzas Militares, comprometidos con proteger la vida, los bienes y la tranquilidad de quienes confían en nosotros. Más que prestar un servicio, asumimos una misión: brindar acompañamiento confiable para que cada recorrido, traslado o experiencia turística se desarrolle con seguridad y sin interrupciones.",
     cta1: "Pedir Cotización",
     cta2: "Ver Servicios",
     stats: [
@@ -93,7 +91,7 @@ const es = {
     badge: "Equipo Profesional",
     title: "Protección Ejecutiva de",
     titleHighlight: "Alto Nivel",
-    p1: "Nuestros agentes son ex-militares de las Fuerzas Especiales del Ejército Nacional de Colombia, aprobados por el Gobierno Nacional con todas las licencias vigentes.",
+    p1: "Somos un equipo de 25 profesionales con experiencia en las Fuerzas Militares, aprobados por el Gobierno Nacional, comprometidos con proteger la vida, los bienes y la tranquilidad de quienes confían en nosotros. Más que prestar un servicio, asumimos una misión: brindar acompañamiento confiable para que cada recorrido, traslado o experiencia turística se desarrolle con seguridad y sin interrupciones.",
     p2: "Cada escolta recibe entrenamiento continuo en protección ejecutiva, manejo defensivo, primeros auxilios tácticos y protocolos de seguridad internacional.",
     list: [
       "Licencia de seguridad vigente",
@@ -173,6 +171,14 @@ const es = {
     bannerWe: "En",
     bannerWeSay: "decimos:",
     bannerWeQuote: '"El servicio ya está operativo."',
+  },
+  gallery: {
+    badge: "Galería",
+    title: "Momentos",
+    titleHighlight: "Reales",
+    subtitle:
+      "Operaciones, clientes y destinos: así se vive la experiencia 10X ASEGLO en Colombia.",
+    imgAlt: "Galería 10X ASEGLO",
   },
   cta: {
     badge: "Contacto",
@@ -305,8 +311,6 @@ const en: Translation = {
     titleHighlight: "Security, Tourism & Transport",
     title2: "Solutions",
     desc: "We guarantee our clients' security, transport and tourism with discipline, loyalty and professionalism.",
-    desc2:
-      "We are a team of 25 professionals with Military Forces experience, committed to protecting the lives, assets and peace of mind of those who trust us. More than providing a service, we take on a mission: reliable accompaniment so that every trip, transfer or tourism experience unfolds safely and without interruptions.",
     cta1: "Request a Quote",
     cta2: "View Services",
     stats: [
@@ -384,7 +388,7 @@ const en: Translation = {
     badge: "Professional Team",
     title: "High-Level Executive",
     titleHighlight: "Protection",
-    p1: "Our agents are former Special Forces military of the National Army of Colombia, approved by the National Government with all licenses current.",
+    p1: "We are a team of 25 professionals with Military Forces experience, approved by the National Government, committed to protecting the lives, assets and peace of mind of those who trust us. More than providing a service, we take on a mission: reliable accompaniment so that every trip, transfer or tourism experience unfolds safely and without interruptions.",
     p2: "Every bodyguard receives continuous training in executive protection, defensive driving, tactical first aid and international security protocols.",
     list: [
       "Current security license",
@@ -464,6 +468,14 @@ const en: Translation = {
     bannerWe: "At",
     bannerWeSay: "we say:",
     bannerWeQuote: '"The service is already operational."',
+  },
+  gallery: {
+    badge: "Gallery",
+    title: "Real",
+    titleHighlight: "Moments",
+    subtitle:
+      "Operations, clients and destinations: this is the 10X ASEGLO experience in Colombia.",
+    imgAlt: "10X ASEGLO gallery",
   },
   cta: {
     badge: "Contact",

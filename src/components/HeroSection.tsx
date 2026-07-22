@@ -45,19 +45,14 @@ const HeroSection = () => {
             {t.hero.title2}
           </motion.h1>
 
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mb-10 max-w-xl"
+            className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-10 max-w-xl"
           >
-            <p className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-4">
-              {t.hero.desc}
-            </p>
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed hidden sm:block">
-              {t.hero.desc2}
-            </p>
-          </motion.div>
+            {t.hero.desc}
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}

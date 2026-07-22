@@ -5,6 +5,7 @@ import OperationsSection from "@/components/OperationsSection";
 import EliteTeamSection from "@/components/EliteTeamSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import GallerySection from "@/components/GallerySection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -19,6 +20,7 @@ const Index = () => {
       <EliteTeamSection />
       <WhyUsSection />
       <TestimonialsSection />
+      <GallerySection />
       <CTASection />
       <Footer />
       <WhatsAppButton />
