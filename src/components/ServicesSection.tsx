@@ -57,11 +57,12 @@ const ServicesSection = () => {
             return (
               <motion.div
                 key={service.key}
+                id={service.key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group relative overflow-hidden bg-card border border-border hover:border-primary/40 transition-all duration-500"
+                className="group relative overflow-hidden bg-card border border-border hover:border-primary/40 transition-all duration-500 scroll-mt-28"
               >
                 {service.link ? (
                   <Link to={service.link} className="relative h-56 overflow-hidden block cursor-pointer">
@@ -137,11 +138,12 @@ const ServicesSection = () => {
             return (
               <motion.div
                 key={service.key}
+                id={service.key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group relative overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500"
+                className="group relative overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 scroll-mt-28"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img

@@ -6,7 +6,14 @@ import logoHorizontal from "@/assets/logo-horizontal.png";
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20información";
 
 const navHrefs = ["/", "/servicios", "/nosotros", "/contacto"];
-const serviceHrefs = ["/servicios", "/transporte", "/servicios", "/servicios", "/servicios", "/servicios"];
+const serviceHrefs = [
+  "/servicios#seguridad",
+  "/transporte",
+  "/servicios#tour",
+  "/servicios#hospedaje",
+  "/servicios#entrenamiento",
+  "/servicios#detective",
+];
 
 const Footer = () => {
   const { t } = useLanguage();
