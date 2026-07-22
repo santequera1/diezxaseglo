@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-import bodyguardMale from "@/assets/escolta-portrait.jpg";
+import bodyguardMale from "@/assets/equipo-tahoes.webp";
 import bodyguardFemale from "@/assets/escolta-suit-suv.jpg";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20una%20cotización";

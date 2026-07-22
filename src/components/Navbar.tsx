@@ -28,7 +28,7 @@ const Navbar = () => {
             <img
               src={logoHorizontal}
               alt="10X ASEGLO - Agencia de Seguridad Global"
-              className="h-9 md:h-11 w-auto"
+              className="h-7 md:h-11 w-auto"
             />
           </Link>
 

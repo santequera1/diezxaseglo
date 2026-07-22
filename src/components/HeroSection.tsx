@@ -28,8 +28,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 mb-6"
           >
-            <Shield className="w-5 h-5 text-white md:text-primary" />
-            <span className="text-white md:text-primary text-sm font-semibold tracking-[0.3em] uppercase">
+            <Shield className="w-5 h-5 text-primary" />
+            <span className="text-primary text-sm font-semibold tracking-[0.3em] uppercase">
               {t.hero.badge}
             </span>
           </motion.div>
@@ -38,10 +38,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+            className="font-display text-2xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
           >
             {t.hero.title1}{" "}
-            <span className="text-white md:text-gradient-gold">{t.hero.titleHighlight}</span>{" "}
+            <span className="text-gradient-gold">{t.hero.titleHighlight}</span>{" "}
             {t.hero.title2}
           </motion.h1>
 
@@ -49,7 +49,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-10 max-w-xl"
+            className="text-foreground/90 text-base md:text-xl leading-relaxed mb-10 max-w-xl"
           >
             {t.hero.desc}
           </motion.p>

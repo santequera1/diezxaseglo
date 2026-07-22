@@ -3,7 +3,7 @@ import { Eye, Shield, Radio } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 import surveillanceImg from "@/assets/surveillance-room.png";
-import monitorImg from "@/assets/security-monitor.png";
+import monitorImg from "@/assets/escolta-portrait.jpg";
 
 const icons = [Eye, Shield, Radio];
 
@@ -79,8 +79,8 @@ const OperationsSection = () => {
             >
               <img
                 src={monitorImg}
-                alt="Agente de seguridad monitoreando"
-                className="w-full h-48 object-cover border border-border"
+                alt="Escolta profesional 10X ASEGLO"
+                className="w-full h-48 object-cover object-top border border-border"
                 loading="lazy"
               />
             </motion.div>

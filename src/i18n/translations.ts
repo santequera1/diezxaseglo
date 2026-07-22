@@ -40,7 +40,7 @@ const es = {
       transporte: {
         title: "Transporte",
         description:
-          "Flota de autos luxury para comodidad, eficacia y seguridad. Viajes confortables con total garantía.",
+          "Flota de autos de élite para comodidad, eficacia y seguridad. Viajes confortables con total garantía.",
       },
       tour: {
         title: "Tour V.I.P",
