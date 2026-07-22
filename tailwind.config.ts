@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Apotek Cond"', '"Bebas Neue"', 'sans-serif'],
+        display: ['"Bebas Neue"', 'sans-serif'],
         body: ['"Montserrat"', 'sans-serif'],
       },
       colors: {
