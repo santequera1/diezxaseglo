@@ -3,12 +3,12 @@ import { Shield, Car, MapPin, Building, GraduationCap, Search, Star } from "luci
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-import securityImg from "@/assets/team-navy.jpg";
+import securityImg from "@/assets/seguridad-escoltas.webp";
 import transportImg from "@/assets/team-fleet.jpg";
-import tourImg from "@/assets/tour-vip-service.jpg";
+import tourImg from "@/assets/tour-clientes-guatape.webp";
 import hospedajeImg from "@/assets/hospedaje-service.jpg";
-import trainingImg from "@/assets/training-service.jpg";
-import detectiveImg from "@/assets/detective-service.jpg";
+import trainingImg from "@/assets/entrenamiento-10x.webp";
+import detectiveImg from "@/assets/detective-10x.webp";
 
 type ServiceKey = "seguridad" | "transporte" | "tour" | "hospedaje" | "entrenamiento" | "detective";
 

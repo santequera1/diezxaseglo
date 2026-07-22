@@ -7,9 +7,12 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CTASection from "@/components/CTASection";
 import { useLanguage } from "@/i18n/LanguageContext";
 import transportImg from "@/assets/transport-intercontinental.jpg";
-import tahoeImg from "@/assets/tahoe-z71.png";
+import tahoeImg from "@/assets/tahoe-negra.webp";
 import pradoBlancaImg from "@/assets/prado-txl-blanca.webp";
 import pradoGrisImg from "@/assets/prado-txl-gris.png";
+import prado250NegraImg from "@/assets/prado-250-negra.webp";
+import prado250BlancaImg from "@/assets/prado-250-blanca.webp";
+import landCruiserImg from "@/assets/land-cruiser-200.webp";
 import lexusImg from "@/assets/lexus-lx.png";
 import escaladeImg from "@/assets/escalade.webp";
 import mercedesVitoImg from "@/assets/mercedes-vito.png";
@@ -32,6 +35,7 @@ type Vehicle = {
   premium?: boolean;
   image?: string;
   images?: VehicleImage[];
+  photo?: boolean;
 };
 
 const vehicles: Vehicle[] = [
@@ -41,6 +45,26 @@ const vehicles: Vehicle[] = [
     colors: ["white", "black"],
     category: "suv",
     image: tahoeImg,
+    photo: true,
+  },
+  {
+    name: "Toyota Prado 250",
+    passengers: "7",
+    colors: ["black", "white"],
+    category: "suv",
+    photo: true,
+    images: [
+      { colorKey: "black", url: prado250NegraImg },
+      { colorKey: "white", url: prado250BlancaImg },
+    ],
+  },
+  {
+    name: "Toyota Land Cruiser 200",
+    passengers: "7",
+    colors: ["white"],
+    category: "suv",
+    image: landCruiserImg,
+    photo: true,
   },
   {
     name: "Toyota Prado TXL",
@@ -114,13 +138,13 @@ const PradoCard = ({ vehicle }: { vehicle: Vehicle }) => {
       transition={{ delay: 0.1 }}
       className="group bg-card border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden"
     >
-      <div className="relative h-64 md:h-72 bg-white flex items-center justify-center overflow-hidden">
+      <div className={`relative h-64 md:h-72 flex items-center justify-center overflow-hidden ${vehicle.photo ? "bg-card" : "bg-white"}`}>
         <AnimatePresence mode="wait">
           <motion.img
             key={activeColor}
             src={imgs[activeColor].url}
             alt={`${vehicle.name} - ${t.transporte.colors[imgs[activeColor].colorKey]}`}
-            className="w-full h-full object-contain p-4"
+            className={vehicle.photo ? "w-full h-full object-cover" : "w-full h-full object-contain p-4"}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
@@ -182,12 +206,14 @@ const VehicleCard = ({ vehicle, index }: { vehicle: Vehicle; index: number }) =>
       transition={{ delay: index * 0.1 }}
       className="group bg-card border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden"
     >
-      <div className="relative h-64 md:h-72 bg-white flex items-center justify-center overflow-hidden">
+      <div className={`relative h-64 md:h-72 flex items-center justify-center overflow-hidden ${vehicle.photo ? "bg-card" : "bg-white"}`}>
         {vehicle.image ? (
           <img
             src={vehicle.image}
             alt={vehicle.name}
-            className="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105"
+            className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${
+              vehicle.photo ? "object-cover" : "object-contain p-4"
+            }`}
             loading="lazy"
           />
         ) : (

@@ -26,7 +26,7 @@ const EliteTeamSection = () => {
                 <img
                   src={bodyguardMale}
                   alt={t.eliteTeam.imgAlt1}
-                  className="w-full h-full object-cover object-center aspect-[3/4]"
+                  className="w-full h-full object-cover object-top aspect-[3/4] lg:aspect-auto"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />
@@ -35,7 +35,7 @@ const EliteTeamSection = () => {
                 <img
                   src={bodyguardFemale}
                   alt={t.eliteTeam.imgAlt2}
-                  className="w-full h-full object-cover object-top aspect-[3/4]"
+                  className="w-full h-full object-cover object-top aspect-[3/4] lg:aspect-auto"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />

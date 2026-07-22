@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import { Quote, BadgeCheck } from "lucide-react";
+import { Quote, BadgeCheck, PlayCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import celebrityImg from "@/assets/celebrity-protection.jpg";
+import celebrityImg from "@/assets/cliente-artista.webp";
 
-const names = ["Tony Hawk", "Julia Miles", "John Goodman"];
+const videos = [
+  { src: "/videos/testimonio-1.mp4", poster: "/videos/testimonio-1-poster.jpg" },
+  { src: "/videos/testimonio-2.mp4", poster: "/videos/testimonio-2-poster.jpg" },
+];
 
 const TestimonialsSection = () => {
   const { t } = useLanguage();
@@ -50,10 +53,36 @@ const TestimonialsSection = () => {
           </div>
         </motion.div>
 
+        {/* Video Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <div className="flex items-center justify-center gap-2 text-primary text-sm font-bold tracking-[0.2em] uppercase mb-8">
+            <PlayCircle className="w-5 h-5" />
+            {t.testimonials.videosTitle}
+          </div>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+            {videos.map((video) => (
+              <video
+                key={video.src}
+                src={video.src}
+                poster={video.poster}
+                controls
+                playsInline
+                preload="none"
+                className="w-full max-w-[300px] aspect-[9/16] object-cover bg-card border border-border"
+              />
+            ))}
+          </div>
+        </motion.div>
+
         <div className="grid md:grid-cols-3 gap-8">
           {t.testimonials.items.map((item, i) => (
             <motion.div
-              key={names[i]}
+              key={item.role}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -65,8 +94,7 @@ const TestimonialsSection = () => {
                 «{item.quote}»
               </p>
               <div className="border-t border-border pt-4">
-                <div className="font-display font-bold text-primary">{names[i]}</div>
-                <div className="text-muted-foreground text-xs tracking-wider uppercase">{item.role}</div>
+                <div className="font-display font-bold text-primary">{item.role}</div>
               </div>
             </motion.div>
           ))}

@@ -1,9 +1,12 @@
-import { Instagram, Facebook, Youtube, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
+import logoHorizontal from "@/assets/logo-horizontal.png";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20información";
 
 const navHrefs = ["/", "/servicios", "/nosotros", "/contacto"];
+const serviceHrefs = ["/servicios", "/transporte", "/servicios", "/servicios", "/servicios", "/servicios"];
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -14,7 +17,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="font-display text-xl font-bold text-gradient-gold mb-4">10X ASEGLO</h3>
+            <img
+              src={logoHorizontal}
+              alt="10X ASEGLO - Agencia de Seguridad Global"
+              className="h-10 w-auto mb-4"
+              loading="lazy"
+            />
             <p className="text-muted-foreground text-sm leading-relaxed">
               {t.footer.brandDesc}
             </p>
@@ -26,9 +34,9 @@ const Footer = () => {
             <ul className="space-y-2">
               {t.footer.nav.map((item, i) => (
                 <li key={item}>
-                  <a href={navHrefs[i]} className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  <Link to={navHrefs[i]} className="text-muted-foreground text-sm hover:text-primary transition-colors">
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -38,9 +46,11 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-bold text-sm tracking-wider uppercase mb-4 text-primary">{t.footer.servicesTitle}</h4>
             <ul className="space-y-2">
-              {t.footer.services.map((item) => (
+              {t.footer.services.map((item, i) => (
                 <li key={item}>
-                  <span className="text-muted-foreground text-sm">{item}</span>
+                  <Link to={serviceHrefs[i]} className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                    {item}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -50,33 +60,24 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-bold text-sm tracking-wider uppercase mb-4 text-primary">{t.footer.contactTitle}</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-muted-foreground text-sm">
-                <Phone className="w-4 h-4 text-primary" />
-                +57 304 494 6469
+              <li>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-primary transition-colors">
+                  <Phone className="w-4 h-4 text-primary" />
+                  +57 304 494 6469
+                </a>
               </li>
-              <li className="flex items-center gap-2 text-muted-foreground text-sm">
-                <Mail className="w-4 h-4 text-primary" />
-                10xaseglo@gmail.com
+              <li>
+                <a href="mailto:10xaseglo@gmail.com" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-primary transition-colors">
+                  <Mail className="w-4 h-4 text-primary" />
+                  10xaseglo@gmail.com
+                </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
                 <MapPin className="w-4 h-4 text-primary" />
                 Medellín, Colombia
               </li>
             </ul>
-            <div className="flex gap-3 mt-5">
-              <a href="https://www.instagram.com/10xaseglo_agencia" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="https://www.facebook.com/@10xaseglo" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="https://www.youtube.com/@10xaseglo" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all">
-                <Youtube className="w-4 h-4" />
-              </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all">
-                <Phone className="w-4 h-4" />
-              </a>
-            </div>
+            {/* TODO: restaurar iconos de redes sociales cuando envíen los nuevos links (las cuentas anteriores ya no existen) */}
           </div>
         </div>
       </div>

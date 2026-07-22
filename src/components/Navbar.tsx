@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Instagram, Facebook, Youtube, CreditCard } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageToggle from "@/components/LanguageToggle";
+import logoHorizontal from "@/assets/logo-horizontal.png";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20información";
-// TODO: reemplazar con el link de pago real (pasarela / enlace de cobro)
-const PAYMENT_URL = "#";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +25,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <span className="font-display text-xl font-bold text-gradient-gold tracking-wider">
-              10X ASEGLO
-            </span>
+            <img
+              src={logoHorizontal}
+              alt="10X ASEGLO - Agencia de Seguridad Global"
+              className="h-9 md:h-11 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -44,26 +45,11 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
-            <a
-              href={PAYMENT_URL}
-              className="flex items-center gap-1.5 text-sm font-medium tracking-widest uppercase text-foreground/70 transition-colors hover:text-primary"
-            >
-              <CreditCard className="w-4 h-4" />
-              {t.nav.pagar}
-            </a>
           </div>
 
           <div className="hidden md:flex items-center gap-3">
             <LanguageToggle />
-            <a href="https://www.instagram.com/10xaseglo_agencia" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-foreground/50 hover:text-primary transition-colors">
-              <Instagram className="w-4 h-4" />
-            </a>
-            <a href="https://www.facebook.com/@10xaseglo" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-foreground/50 hover:text-primary transition-colors">
-              <Facebook className="w-4 h-4" />
-            </a>
-            <a href="https://www.youtube.com/@10xaseglo" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-foreground/50 hover:text-primary transition-colors">
-              <Youtube className="w-4 h-4" />
-            </a>
+            {/* TODO: restaurar iconos de redes sociales cuando envíen los nuevos links (las cuentas anteriores ya no existen) */}
             <a
               href={WHATSAPP_URL}
               target="_blank"
@@ -111,14 +97,6 @@ const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-              <a
-                href={PAYMENT_URL}
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 text-sm font-medium tracking-widest uppercase py-2 text-foreground/70"
-              >
-                <CreditCard className="w-4 h-4" />
-                {t.nav.pagar}
-              </a>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"

@@ -6,12 +6,12 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CTASection from "@/components/CTASection";
 import { useLanguage } from "@/i18n/LanguageContext";
 import heroBg from "@/assets/team-fleet.jpg";
-import teamNavy from "@/assets/team-navy.jpg";
-import teamGrey from "@/assets/team-grey.jpg";
-import escoltasSuits from "@/assets/escoltas-suits-fleet.jpg";
-import escoltasTactical from "@/assets/escoltas-tactical.jpg";
-import escoltasVip from "@/assets/escoltas-vip-protege.jpg";
-import escoltasRifles from "@/assets/escoltas-rifles-vip.jpg";
+import equipoSeguridad from "@/assets/seguridad-escoltas.webp";
+import equipoTahoes from "@/assets/equipo-tahoes.webp";
+import equipoMarriott from "@/assets/equipo-marriott.webp";
+import equipoNoche from "@/assets/equipo-noche.webp";
+import conductor10x from "@/assets/conductor-10x.webp";
+import equipoPrado from "@/assets/equipo-prado.webp";
 
 const valueIcons = [Award, Handshake, Heart];
 
@@ -19,12 +19,12 @@ const Nosotros = () => {
   const { t } = useLanguage();
 
   const teamImages = [
-    { src: teamNavy, span: "md:col-span-2 md:row-span-2" },
-    { src: escoltasTactical, span: "" },
-    { src: escoltasVip, span: "" },
-    { src: teamGrey, span: "" },
-    { src: escoltasRifles, span: "" },
-    { src: escoltasSuits, span: "md:col-span-2" },
+    { src: equipoSeguridad, span: "md:col-span-2 md:row-span-2" },
+    { src: equipoTahoes, span: "" },
+    { src: equipoMarriott, span: "" },
+    { src: equipoNoche, span: "" },
+    { src: conductor10x, span: "" },
+    { src: equipoPrado, span: "md:col-span-2" },
   ];
 
   return (

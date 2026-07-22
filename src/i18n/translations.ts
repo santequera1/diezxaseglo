@@ -6,28 +6,29 @@ const es = {
     servicios: "Servicios",
     nosotros: "Sobre Nosotros",
     contacto: "Contacto",
-    pagar: "Pagar",
     cotizar: "Cotizar",
   },
   hero: {
     badge: "Protección de élite",
     title1: "Soluciones de",
-    titleHighlight: "Seguridad",
+    titleHighlight: "Seguridad, Turismo y Transporte",
     title2: "a tu Medida",
-    desc: "La vigilancia y seguridad es una gran responsabilidad. Nuestro equipo analiza cada caso para ofrecer un servicio sin fisuras, con profesionales cualificados preparados para cada situación.",
+    desc: "Garantizamos la seguridad, el transporte y el turismo de nuestros clientes con disciplina, lealtad y profesionalismo.",
+    desc2:
+      "Somos un equipo de 25 profesionales con experiencia en las Fuerzas Militares, comprometidos con proteger la vida, los bienes y la tranquilidad de quienes confían en nosotros. Más que prestar un servicio, asumimos una misión: brindar acompañamiento confiable para que cada recorrido, traslado o experiencia turística se desarrolle con seguridad y sin interrupciones.",
     cta1: "Pedir Cotización",
     cta2: "Ver Servicios",
     stats: [
-      { num: "10+", label: "Años de Experiencia" },
+      { num: "25", label: "Profesionales de Élite" },
       { num: "500+", label: "Clientes Satisfechos" },
-      { num: "108", label: "Oficinas con Licencia" },
+      { num: "4+", label: "Ciudades Principales de Colombia" },
       { num: "2K+", label: "Activos Protegidos" },
     ],
   },
   services: {
     badge: "Nuestros Servicios",
-    title: "Protección",
-    titleHighlight: "Integral",
+    title: "Seguridad, Turismo",
+    titleHighlight: "y Transporte",
     subtitle:
       "10XASEGLO S.A.S ofrece soluciones de seguridad globales para la protección de la integridad física de bienes, inmuebles y personas.",
     solicitar: "Solicitar Servicio",
@@ -36,7 +37,7 @@ const es = {
       seguridad: {
         title: "Seguridad",
         description:
-          "Escoltas privados de alto rendimiento con formación estricta y gran capacidad. Protección ejecutiva de primer nivel.",
+          "Escoltas privados de alto rendimiento con formación estricta, conocimiento y experiencia en protección ejecutiva de primer nivel.",
       },
       transporte: {
         title: "Transporte",
@@ -111,18 +112,21 @@ const es = {
     title: "¿Por Qué",
     titleHighlight: "Elegirnos",
     titleEnd: "?",
+    waText:
+      "¿Tienes dudas o necesitas una cotización? Nuestro equipo te atiende de inmediato, las 24 horas.",
+    waLink: "Escríbenos por WhatsApp →",
     items: [
       {
         title: "Perfección en Cualquier Momento",
-        description: "Servicio 100% adaptado y adaptable a cada cliente.",
+        description: "Cada operación se planifica al detalle para ofrecer un servicio impecable, adaptado a cada cliente.",
       },
       {
         title: "Comunicación 24/7",
-        description: "Empresa joven, referente por constancia, garantías y profesionalidad.",
+        description: "Referentes por constancia, garantías y profesionalidad. Atención directa en todo momento.",
       },
       {
         title: "Nuestra Flota",
-        description: "La mejor flota de vehículos luxury con todas las garantías.",
+        description: "La mejor flota de vehículos de élite con todas las garantías.",
       },
       {
         title: "Ayuda de Emergencias",
@@ -146,6 +150,7 @@ const es = {
     trustedText:
       "Hemos brindado protección y acompañamiento a celebridades y figuras públicas durante sus estadías en Colombia.",
     trustedAlt: "Escolta 10X ASEGLO con figura internacional",
+    videosTitle: "Testimonios Reales en Video",
     items: [
       {
         quote:
@@ -292,28 +297,29 @@ const en: Translation = {
     servicios: "Services",
     nosotros: "About Us",
     contacto: "Contact",
-    pagar: "Pay",
     cotizar: "Get a Quote",
   },
   hero: {
     badge: "Elite Protection",
-    title1: "Security Solutions",
-    titleHighlight: "Tailored",
-    title2: "to Your Needs",
-    desc: "Surveillance and security is a major responsibility. Our team analyzes every case to deliver a seamless service, with qualified professionals ready for any situation.",
+    title1: "Tailored",
+    titleHighlight: "Security, Tourism & Transport",
+    title2: "Solutions",
+    desc: "We guarantee our clients' security, transport and tourism with discipline, loyalty and professionalism.",
+    desc2:
+      "We are a team of 25 professionals with Military Forces experience, committed to protecting the lives, assets and peace of mind of those who trust us. More than providing a service, we take on a mission: reliable accompaniment so that every trip, transfer or tourism experience unfolds safely and without interruptions.",
     cta1: "Request a Quote",
     cta2: "View Services",
     stats: [
-      { num: "10+", label: "Years of Experience" },
+      { num: "25", label: "Elite Professionals" },
       { num: "500+", label: "Satisfied Clients" },
-      { num: "108", label: "Licensed Offices" },
+      { num: "4+", label: "Major Cities in Colombia" },
       { num: "2K+", label: "Assets Protected" },
     ],
   },
   services: {
     badge: "Our Services",
-    title: "Comprehensive",
-    titleHighlight: "Protection",
+    title: "Security, Tourism",
+    titleHighlight: "& Transport",
     subtitle:
       "10XASEGLO S.A.S provides global security solutions to protect the physical integrity of assets, properties and people.",
     solicitar: "Request Service",
@@ -322,7 +328,7 @@ const en: Translation = {
       seguridad: {
         title: "Security",
         description:
-          "High-performance private bodyguards with strict training and great capability. First-class executive protection.",
+          "High-performance private bodyguards with strict training, knowledge and experience in first-class executive protection.",
       },
       transporte: {
         title: "Transport",
@@ -397,18 +403,21 @@ const en: Translation = {
     title: "Why",
     titleHighlight: "Choose Us",
     titleEnd: "?",
+    waText:
+      "Questions or need a quote? Our team is ready to assist you right away, 24 hours a day.",
+    waLink: "Message us on WhatsApp →",
     items: [
       {
         title: "Perfection at Any Moment",
-        description: "Service 100% adapted and adaptable to each client.",
+        description: "Every operation is planned in detail to deliver flawless service, tailored to each client.",
       },
       {
         title: "24/7 Communication",
-        description: "A young company, a benchmark for consistency, guarantees and professionalism.",
+        description: "A benchmark for consistency, guarantees and professionalism. Direct attention at all times.",
       },
       {
         title: "Our Fleet",
-        description: "The best luxury vehicle fleet with all guarantees.",
+        description: "The best fleet of elite vehicles with all guarantees.",
       },
       {
         title: "Emergency Assistance",
@@ -432,6 +441,7 @@ const en: Translation = {
     trustedText:
       "We have provided protection and support to celebrities and public figures during their stays in Colombia.",
     trustedAlt: "10X ASEGLO bodyguard with international figure",
+    videosTitle: "Real Video Testimonials",
     items: [
       {
         quote:

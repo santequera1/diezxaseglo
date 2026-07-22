@@ -21,7 +21,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="max-w-[35rem]">
+        <div className="max-w-[42rem]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,21 +38,26 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+            className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
           >
             {t.hero.title1}{" "}
             <span className="text-white md:text-gradient-gold">{t.hero.titleHighlight}</span>{" "}
             {t.hero.title2}
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 max-w-xl"
+            className="mb-10 max-w-xl"
           >
-            {t.hero.desc}
-          </motion.p>
+            <p className="text-foreground/90 text-lg md:text-xl leading-relaxed mb-4">
+              {t.hero.desc}
+            </p>
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed hidden sm:block">
+              {t.hero.desc2}
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}

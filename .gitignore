@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Material bruto de la cliente (no publicar)
+cambios/
+imagenes.zip
+portada.png

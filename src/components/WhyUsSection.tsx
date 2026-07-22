@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Clock, Phone, Car, AlertTriangle, Cpu, BadgeCheck } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
+const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20información";
+
 const icons = [Clock, Phone, Car, AlertTriangle, Cpu, BadgeCheck];
 
 const WhyUsSection = () => {
@@ -20,6 +22,17 @@ const WhyUsSection = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4">
             {t.whyUs.title} <span className="text-gradient-gold">{t.whyUs.titleHighlight}</span>{t.whyUs.titleEnd}
           </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mt-6">
+            {t.whyUs.waText}{" "}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-semibold hover:underline whitespace-nowrap"
+            >
+              {t.whyUs.waLink}
+            </a>
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
