@@ -27,7 +27,7 @@ const services: {
   { key: "detective", icon: Search, image: detectiveImg, featured: false },
 ];
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20me%20interesa%20el%20servicio%20de%20";
+import { whatsappUrlFor } from "@/lib/whatsapp";
 
 const ServicesSection = () => {
   const { t } = useLanguage();
@@ -109,7 +109,7 @@ const ServicesSection = () => {
                   <p className="text-muted-foreground text-sm leading-relaxed mb-5">{item.description}</p>
                   <div className="flex items-center gap-3">
                     <a
-                      href={`${WHATSAPP_URL}${encodeURIComponent(item.title)}`}
+                      href={whatsappUrlFor(item.title)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground px-6 py-2.5 text-xs font-bold tracking-wider uppercase hover:shadow-gold transition-all"
@@ -163,7 +163,7 @@ const ServicesSection = () => {
                   </div>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-5">{item.description}</p>
                   <a
-                    href={`${WHATSAPP_URL}${encodeURIComponent(item.title)}`}
+                    href={whatsappUrlFor(item.title)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground px-6 py-2.5 text-xs font-bold tracking-wider uppercase hover:shadow-gold transition-all"

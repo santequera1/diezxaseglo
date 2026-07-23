@@ -5,6 +5,7 @@ import ContactButton from "@/components/ContactButton";
 import celebrityImg from "@/assets/cliente-artista.webp";
 
 const videos = [
+  { src: "/videos/testimonio-principal.mp4", poster: "/videos/testimonio-principal-poster.jpg" },
   { src: "/videos/testimonio-1.mp4", poster: "/videos/testimonio-1-poster.jpg" },
   { src: "/videos/testimonio-2.mp4", poster: "/videos/testimonio-2-poster.jpg" },
   { src: "/videos/testimonio-3.mp4", poster: "/videos/testimonio-3-poster.jpg" },
@@ -66,7 +67,7 @@ const TestimonialsSection = () => {
             <PlayCircle className="w-5 h-5" />
             {t.testimonials.videosTitle}
           </div>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-8">
             {videos.map((video) => (
               <video
                 key={video.src}

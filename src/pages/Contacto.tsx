@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20información%20sobre%20sus%20servicios";
+import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 const Contacto = () => {
   const { t } = useLanguage();

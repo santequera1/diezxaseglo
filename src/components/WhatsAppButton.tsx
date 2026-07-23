@@ -1,4 +1,4 @@
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=NECESITO%20INFORMACION";
+import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg

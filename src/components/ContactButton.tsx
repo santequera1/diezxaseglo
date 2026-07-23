@@ -1,7 +1,7 @@
 import { Phone } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20información";
+import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 const ContactButton = ({ className = "" }: { className?: string }) => {
   const { t } = useLanguage();

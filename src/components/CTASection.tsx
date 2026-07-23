@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Phone, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20una%20cotización";
+import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 const CTASection = () => {
   const { t } = useLanguage();

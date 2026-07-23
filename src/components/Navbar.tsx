@@ -6,7 +6,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageToggle from "@/components/LanguageToggle";
 import logoHorizontal from "@/assets/logo-horizontal.png";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20información";
+import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

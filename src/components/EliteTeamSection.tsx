@@ -5,7 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import bodyguardMale from "@/assets/equipo-tahoes.webp";
 import bodyguardFemale from "@/assets/escolta-suit-suv.jpg";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20una%20cotización";
+import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 const EliteTeamSection = () => {
   const { t } = useLanguage();
