@@ -14,7 +14,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-end md:items-center overflow-hidden pt-24 pb-48 md:pb-0">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroBgMobile} alt="10X ASEGLO Seguridad" className="w-full h-full object-cover object-[22%_top] md:hidden" width={1024} height={1514} />
+        <img src={heroBgMobile} alt="10X ASEGLO Seguridad" className="w-full h-full object-cover object-[22%_top] md:hidden" width={1024} height={1212} />
         <img src={heroBg} alt="10X ASEGLO Seguridad" className="w-full h-full object-cover hidden md:block" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-background/10 hidden md:block" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent hidden md:block" />
