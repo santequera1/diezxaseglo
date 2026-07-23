@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Eye, Shield, Radio } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import ContactButton from "@/components/ContactButton";
 
 import surveillanceImg from "@/assets/surveillance-room.png";
 import monitorImg from "@/assets/escolta-portrait.jpg";
@@ -85,6 +86,10 @@ const OperationsSection = () => {
               />
             </motion.div>
           </div>
+        </div>
+
+        <div className="text-center mt-14">
+          <ContactButton />
         </div>
       </div>
     </section>

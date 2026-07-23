@@ -179,6 +179,15 @@ const es = {
     subtitle:
       "Operaciones, clientes y destinos: así se vive la experiencia 10X ASEGLO en Colombia.",
     imgAlt: "Galería 10X ASEGLO",
+    viewAll: "Ver Galería Completa",
+    pageTitle: "Galería",
+    pageHighlight: "Completa",
+    pageSubtitle:
+      "Un recorrido visual por nuestras operaciones: clientes protegidos, escoltas en acción, flota de élite y destinos en toda Colombia.",
+    close: "Cerrar",
+  },
+  common: {
+    contactar: "Contactar",
   },
   cta: {
     badge: "Contacto",
@@ -476,6 +485,15 @@ const en: Translation = {
     subtitle:
       "Operations, clients and destinations: this is the 10X ASEGLO experience in Colombia.",
     imgAlt: "10X ASEGLO gallery",
+    viewAll: "View Full Gallery",
+    pageTitle: "Full",
+    pageHighlight: "Gallery",
+    pageSubtitle:
+      "A visual tour of our operations: protected clients, bodyguards in action, an elite fleet and destinations across Colombia.",
+    close: "Close",
+  },
+  common: {
+    contactar: "Contact Us",
   },
   cta: {
     badge: "Contact",

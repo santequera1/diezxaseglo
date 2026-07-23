@@ -10,6 +10,7 @@ import Servicios from "./pages/Servicios.tsx";
 import Nosotros from "./pages/Nosotros.tsx";
 import Contacto from "./pages/Contacto.tsx";
 import Transporte from "./pages/Transporte.tsx";
+import Galeria from "./pages/Galeria.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/transporte" element={<Transporte />} />
+            <Route path="/galeria" element={<Galeria />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

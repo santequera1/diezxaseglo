@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 # Material bruto de la cliente (no publicar)
-cambios/
+/cambios/
+/galeria/
 imagenes.zip
 portada.png

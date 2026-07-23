@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Quote, BadgeCheck, PlayCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import ContactButton from "@/components/ContactButton";
 import celebrityImg from "@/assets/cliente-artista.webp";
 
 const videos = [
@@ -117,6 +118,9 @@ const TestimonialsSection = () => {
             {t.testimonials.bannerWeSay}{" "}
             <span className="text-primary">{t.testimonials.bannerWeQuote}</span>
           </p>
+          <div className="mt-8">
+            <ContactButton />
+          </div>
         </motion.div>
       </div>
     </section>

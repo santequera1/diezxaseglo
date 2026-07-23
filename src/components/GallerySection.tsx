@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
+import ContactButton from "@/components/ContactButton";
 
 import escoltaSuv from "@/assets/galeria-escolta-suv.webp";
 import guatapePiedra from "@/assets/galeria-guatape-piedra.webp";
@@ -62,6 +65,22 @@ const GallerySection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <Link
+            to="/galeria"
+            className="inline-flex items-center gap-2 border border-primary/40 text-foreground px-8 py-3.5 text-sm font-bold tracking-wider uppercase hover:border-primary hover:text-primary transition-all"
+          >
+            {t.gallery.viewAll}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <ContactButton />
+        </motion.div>
       </div>
     </section>
   );

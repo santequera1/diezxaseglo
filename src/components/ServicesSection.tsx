@@ -6,7 +6,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import securityImg from "@/assets/seguridad-escoltas.webp";
 import transportImg from "@/assets/team-fleet.jpg";
 import tourImg from "@/assets/tour-clientes-guatape.webp";
-import hospedajeImg from "@/assets/hospedaje-service.jpg";
+import hospedajeImg from "@/assets/hospedaje-10x.webp";
 import trainingImg from "@/assets/entrenamiento-10x.webp";
 import detectiveImg from "@/assets/detective-10x.webp";
 

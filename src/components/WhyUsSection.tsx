@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Clock, Phone, Car, AlertTriangle, Cpu, BadgeCheck } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
+import ContactButton from "@/components/ContactButton";
+
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=573044946469&text=Hola%2C%20necesito%20información";
 
 const icons = [Clock, Phone, Car, AlertTriangle, Cpu, BadgeCheck];
@@ -57,6 +59,10 @@ const WhyUsSection = () => {
               </motion.div>
             );
           })}
+        </div>
+
+        <div className="text-center mt-14">
+          <ContactButton />
         </div>
       </div>
     </section>
