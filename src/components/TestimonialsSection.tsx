@@ -7,6 +7,7 @@ import celebrityImg from "@/assets/cliente-artista.webp";
 const videos = [
   { src: "/videos/testimonio-1.mp4", poster: "/videos/testimonio-1-poster.jpg" },
   { src: "/videos/testimonio-2.mp4", poster: "/videos/testimonio-2-poster.jpg" },
+  { src: "/videos/testimonio-3.mp4", poster: "/videos/testimonio-3-poster.jpg" },
 ];
 
 const TestimonialsSection = () => {
@@ -74,7 +75,7 @@ const TestimonialsSection = () => {
                 controls
                 playsInline
                 preload="none"
-                className="w-full max-w-[300px] aspect-[9/16] object-cover bg-card border border-border"
+                className="w-full max-w-[300px] aspect-[9/16] object-contain bg-card border border-border"
               />
             ))}
           </div>
