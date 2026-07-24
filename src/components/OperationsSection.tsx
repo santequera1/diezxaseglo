@@ -3,7 +3,7 @@ import { Eye, Shield, Radio } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import ContactButton from "@/components/ContactButton";
 
-import surveillanceImg from "@/assets/surveillance-room.png";
+import surveillanceImg from "@/assets/equipo-tahoes.webp";
 import monitorImg from "@/assets/escolta-portrait.jpg";
 
 const icons = [Eye, Shield, Radio];
@@ -36,8 +36,8 @@ const OperationsSection = () => {
           >
             <img
               src={surveillanceImg}
-              alt="Centro de vigilancia y monitoreo 10X ASEGLO"
-              className="w-full h-[400px] object-cover border border-border"
+              alt="Escolta 10X ASEGLO con camionetas blindadas"
+              className="w-full h-[400px] object-cover object-[center_55%] border border-border"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />

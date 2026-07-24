@@ -12,6 +12,8 @@ import equipoMarriott from "@/assets/equipo-marriott.webp";
 import equipoNoche from "@/assets/equipo-noche.webp";
 import conductor10x from "@/assets/conductor-10x.webp";
 import equipoPrado from "@/assets/equipo-prado.webp";
+import equipoMotos from "@/assets/galeria/g14.webp";
+import equipoGrupoNoche from "@/assets/galeria/g17.webp";
 
 const valueIcons = [Award, Handshake, Heart];
 
@@ -24,6 +26,8 @@ const Nosotros = () => {
     { src: equipoMarriott, span: "" },
     { src: equipoNoche, span: "" },
     { src: conductor10x, span: "" },
+    { src: equipoMotos, span: "" },
+    { src: equipoGrupoNoche, span: "" },
     { src: equipoPrado, span: "md:col-span-2" },
   ];
 
@@ -34,7 +38,7 @@ const Nosotros = () => {
         {/* Hero */}
         <section className="relative py-32 overflow-hidden">
           <div className="absolute inset-0">
-            <img src={heroBg} alt="10X ASEGLO" className="w-full h-full object-cover opacity-30" width={1920} height={1080} loading="lazy" />
+            <img src={heroBg} alt="10X ASEGLO" className="w-full h-full object-cover object-[center_30%] opacity-30" width={1920} height={1080} loading="lazy" />
             <div className="absolute inset-0 bg-background/80" />
           </div>
           <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">

@@ -17,9 +17,9 @@ const es = {
     cta1: "Pedir Cotización",
     cta2: "Ver Servicios",
     stats: [
-      { num: "25", label: "Profesionales de Élite" },
+      { num: "25+", label: "Años de Experiencia" },
       { num: "500+", label: "Clientes Satisfechos" },
-      { num: "4+", label: "Ciudades Principales de Colombia" },
+      { num: "Activos", label: "en las Principales Ciudades de Colombia" },
       { num: "2K+", label: "Activos Protegidos" },
     ],
   },
@@ -234,7 +234,7 @@ const es = {
     badge: "Sobre Nosotros",
     title: "10X Agency",
     titleHighlight: "Security Global",
-    subtitle: "Desde 2013 protegiendo lo que más importa",
+    subtitle: "Quiénes Somos",
     historyBadge: "Nuestra Historia",
     historyTitle: "10X AGENCY SECURITY",
     historyHighlight: "GLOBAL S.A.S",
@@ -262,9 +262,10 @@ const es = {
     visionTitle: "Visión",
     visionText:
       "Ser la agencia de seguridad global más reconocida en Colombia y Latinoamérica, posicionándonos como el socio estratégico preferido para empresas y particulares que buscan protección, confianza y excelencia operativa.",
-    sedesTitle: "Nuestras",
-    sedesHighlight: "Sedes",
-    sedesText: "Operamos en las principales ciudades de Colombia con cobertura nacional e internacional.",
+    sedesTitle: "Ciudades y",
+    sedesHighlight: "Lugares Turísticos",
+    sedesText:
+      "Activos en las principales ciudades y destinos turísticos de Colombia, con cobertura nacional e internacional.",
     cities: ["Medellín", "Bogotá", "Cali", "Cartagena"],
   },
   transporte: {
@@ -323,9 +324,9 @@ const en: Translation = {
     cta1: "Request a Quote",
     cta2: "View Services",
     stats: [
-      { num: "25", label: "Elite Professionals" },
+      { num: "25+", label: "Years of Experience" },
       { num: "500+", label: "Satisfied Clients" },
-      { num: "4+", label: "Major Cities in Colombia" },
+      { num: "Active", label: "in Colombia's Major Cities" },
       { num: "2K+", label: "Assets Protected" },
     ],
   },
@@ -540,7 +541,7 @@ const en: Translation = {
     badge: "About Us",
     title: "10X Agency",
     titleHighlight: "Security Global",
-    subtitle: "Protecting what matters most since 2013",
+    subtitle: "Who We Are",
     historyBadge: "Our Story",
     historyTitle: "10X AGENCY SECURITY",
     historyHighlight: "GLOBAL S.A.S",
@@ -568,9 +569,10 @@ const en: Translation = {
     visionTitle: "Vision",
     visionText:
       "To be the most recognized global security agency in Colombia and Latin America, positioning ourselves as the preferred strategic partner for companies and individuals seeking protection, trust and operational excellence.",
-    sedesTitle: "Our",
-    sedesHighlight: "Locations",
-    sedesText: "We operate in the main cities of Colombia with national and international coverage.",
+    sedesTitle: "Cities &",
+    sedesHighlight: "Tourist Destinations",
+    sedesText:
+      "Active in Colombia's main cities and tourist destinations, with national and international coverage.",
     cities: ["Medellín", "Bogotá", "Cali", "Cartagena"],
   },
   transporte: {
