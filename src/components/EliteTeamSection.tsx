@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-import bodyguardMale from "@/assets/equipo-marriott.webp";
+import bodyguardMale from "@/assets/escolta-portrait.jpg";
 import bodyguardFemale from "@/assets/escolta-suit-suv.jpg";
 
 import { WHATSAPP_URL } from "@/lib/whatsapp";

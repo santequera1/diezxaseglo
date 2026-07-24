@@ -5,7 +5,7 @@ import ContactButton from "@/components/ContactButton";
 import celebrityImg from "@/assets/celebrity-protection.jpg";
 
 const videos = [
-  { src: "/videos/testimonio-3.mp4", poster: "/videos/testimonio-3-poster.jpg" },
+  { src: "/videos/testimonio-principal.mp4", poster: "/videos/testimonio-principal-poster.jpg" },
   { src: "/videos/testimonio-1.mp4", poster: "/videos/testimonio-1-poster.jpg" },
   { src: "/videos/testimonio-2.mp4", poster: "/videos/testimonio-2-poster.jpg" },
 ];

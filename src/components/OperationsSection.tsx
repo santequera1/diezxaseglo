@@ -4,7 +4,6 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import ContactButton from "@/components/ContactButton";
 
 import surveillanceImg from "@/assets/equipo-tahoes.webp";
-import monitorImg from "@/assets/escolta-portrait.jpg";
 
 const icons = [Eye, Shield, Radio];
 
@@ -73,18 +72,6 @@ const OperationsSection = () => {
               })}
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src={monitorImg}
-                alt="Escolta profesional 10X ASEGLO"
-                className="w-full h-64 md:h-48 object-cover object-[center_22%] border border-border"
-                loading="lazy"
-              />
-            </motion.div>
           </div>
         </div>
 
